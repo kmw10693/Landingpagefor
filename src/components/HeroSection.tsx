@@ -1,5 +1,8 @@
 import { Sparkles } from 'lucide-react';
 
+// Import images - place your images in /assets/images/ folder
+const festivalHeroImage = '/assets/images/festival-hero.png';
+
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
@@ -29,9 +32,13 @@ export function HeroSection() {
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden border-2 border-purple-500/30 shadow-[0_0_60px_rgba(168,85,247,0.4)]">
             <img
-              src="/images/festival-hero.png"
+              src={festivalHeroImage}
               alt="University Festival"
               className="w-full h-[400px] object-cover opacity-80"
+              onError={(e) => {
+                // Fallback to placeholder if image not found
+                e.currentTarget.src = 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&h=400&fit=crop';
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1a]/80 via-transparent to-transparent" />
           </div>

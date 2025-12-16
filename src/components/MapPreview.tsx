@@ -1,5 +1,8 @@
 import { MapPin, Navigation } from 'lucide-react';
 
+// Import images - place your images in /assets/images/ folder
+const locationMapImage = '/assets/images/location-map.png';
+
 export function MapPreview() {
   return (
     <section className="relative py-32 px-6 lg:px-8">
@@ -41,9 +44,13 @@ export function MapPreview() {
             {/* Map mockup */}
             <div className="relative rounded-3xl border border-purple-500/30 overflow-hidden shadow-[0_0_60px_rgba(168,85,247,0.3)]">
               <img
-                src="/images/location-map.png"
+                src={locationMapImage}
                 alt="Location map"
                 className="w-full h-[500px] object-cover opacity-80"
+                onError={(e) => {
+                  // Fallback to placeholder if image not found
+                  e.currentTarget.src = 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=500&fit=crop';
+                }}
               />
               
               {/* Overlay pins */}
