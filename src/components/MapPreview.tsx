@@ -1,5 +1,4 @@
 import { MapPin, Navigation } from 'lucide-react';
-import mapImage from 'figma:asset/06789890160cbcdcd797d77dbd03e9cec6dcef46.png';
 
 export function MapPreview() {
   return (
@@ -42,7 +41,7 @@ export function MapPreview() {
             {/* Map mockup */}
             <div className="relative rounded-3xl border border-purple-500/30 overflow-hidden shadow-[0_0_60px_rgba(168,85,247,0.3)]">
               <img
-                src={mapImage}
+                src="/images/location-map.png"
                 alt="Location map"
                 className="w-full h-[500px] object-cover opacity-80"
               />

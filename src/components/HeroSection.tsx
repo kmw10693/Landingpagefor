@@ -1,5 +1,4 @@
 import { Sparkles } from 'lucide-react';
-import festivalImage from 'figma:asset/68abefe6ecc870dcd634c423f50a365d1e6580ac.png';
 
 export function HeroSection() {
   return (
@@ -30,7 +29,7 @@ export function HeroSection() {
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden border-2 border-purple-500/30 shadow-[0_0_60px_rgba(168,85,247,0.4)]">
             <img
-              src={festivalImage}
+              src="/images/festival-hero.png"
               alt="University Festival"
               className="w-full h-[400px] object-cover opacity-80"
             />

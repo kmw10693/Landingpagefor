@@ -1,5 +1,4 @@
 import { Heart, MessageCircle, Camera, User, Music, Sparkles } from 'lucide-react';
-import festivalImage from 'figma:asset/2259191c3da01f69179fcb383caebb43852e876b.png';
 
 export function UserExperience() {
   return (
